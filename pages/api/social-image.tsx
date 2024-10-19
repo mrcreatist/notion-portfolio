@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { NextRequest } from 'next/server'
 
 import { ImageResponse } from '@vercel/og'
@@ -36,7 +35,7 @@ export default async function OGImage(req: NextRequest) {
     return new Response(pageInfoRes.statusText, { status: pageInfoRes.status })
   }
   const pageInfo: NotionPageInfo = await pageInfoRes.json()
-  console.log(pageInfo)
+  // console.log(pageInfo)
 
   const [interRegularFont, interBoldFont] = await Promise.all([
     interRegularFontP,
